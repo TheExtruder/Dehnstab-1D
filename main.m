@@ -67,13 +67,13 @@ d = solveq(K,F,dirichletBoundary);
 
 %% Darstellung Ausgangssituation
 y = zeros(1, nElements + 1);
-plot(q,y,'r-o',LineWidth = 3);
-hold on;
+plot(q,y,'r-o','LineWidth',3);
+hold on
 
 %% Darstellung Gleichgewichtslage
 q = q + d;                      % Update, Konfiguration Gleichgewichtslage
-plot(q,y,'b-o',LineWidth = 2);
-hold off;
+plot(q,y,'b-o','LineWidth',2);
+hold off
 
 [newElementData] = extract(edof,q); 
 
@@ -84,7 +84,4 @@ disp(d);
 disp('Gleichgewichtslage:'  )
 disp(newElementData);
 
-%% Spannungsberechnung
-disp(d);
-[d_neu] = extract(edof,d);
-disp(d_neu);
+
